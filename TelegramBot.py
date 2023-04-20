@@ -31,7 +31,7 @@ async def roll_dice(message: types.Message):
 # Обрабатываю команду /info
 @dp.message_handler(commands=['info'])
 async def send_info(message: types.Message):
-    await message.reply(f"{message.from_user.full_name} данный бот разработан что бы помочь и облегчить пользование 'Telegram'\nВсе права пренадлежат @xlopnul_c_ytpa\nОбращайтесь в любоем время по поводу сотрудничества.\n"
+    await message.reply(f"{message.from_user.full_name} данный бот разработан что бы помочь и облегчить пользование 'Telegram'\nВсе права пренадлежат hobydy\nОбращайтесь в любоем время по поводу сотрудничества.\n"
                         f"Список доступных команд:\n/start - Запускает бота и показывает приветсвенное сообщение\n/info - Показывает информацию о боте\n/roll - Генерирует любое случайное число в заданом деапазоне\nИсходный код бота вы можете найти тут:\nhttps://github.com/hobydy/forfuture"
                         )
 
