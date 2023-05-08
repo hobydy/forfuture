@@ -86,11 +86,11 @@ async def convert_mdl(message: types.Message):
     match = re.search(r'\d+', message.text)
     if match:
         # Если число найдено, преобразуем его в число с плавающей точкой
-        number = float(match.group())
+        numberltc = float(match.group())
         # Получаем цену в лтк из мдл
-        convert = mdlltc * number
+        convertltc = mdlltc * numberltc
         # Конвертируем получиные значения
-        await message.reply(f'{number} MDL в LTC будет: {convert} LTC')
+        await message.reply(f'{numberltc} MDL в LTC будет: {convertltc} LTC')
 
 
 @dp.message_handler(commands=['mdlbtc'])
@@ -99,11 +99,11 @@ async def convert_mdl(message: types.Message):
     match = re.search(r'\d+', message.text)
     if match:
         # Если число найдено, преобразуем его в число с плавающей точкой
-        number = float(match.group())
+        numberbtc = float(match.group())
         # Получаем цену в лтк из мдл
-        convert = mdlbtc * number
+        convertbtc = mdlbtc * numberbtc
         # Конвертируем получиные значения
-        await message.reply(f'{number} MDL в BTC будет: {convert} BTC')
+        await message.reply(f'{numberbtc} MDL в BTC будет: {convertbtc} BTC')
 
 
 @dp.message_handler(commands=['mdleth'])
@@ -112,11 +112,11 @@ async def convert_mdl(message: types.Message):
     match = re.search(r'\d+', message.text)
     if match:
         # Если число найдено, преобразуем его в число с плавающей точкой
-        number = float(match.group())
+        numbereth = float(match.group())
         # Получаем цену в лтк из мдл
-        convert = mdleth * number
+        converteth = mdleth * numbereth
         # Конвертируем получиные значения
-        await message.reply(f'{number} MDL в ETH будет: {convert} ETH')
+        await message.reply(f'{numbereth} MDL в ETH будет: {converteth} ETH')
 
 
 if __name__ == '__main__':
