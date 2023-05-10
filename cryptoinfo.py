@@ -30,15 +30,20 @@ else:
 urlbtc = "https://www.google.com/finance/quote/MDL-BTC?sa=X&ved=2ahUKEwjwmOeRib7-AhXy7LsIHQ0TCQEQ-fUHegQIBhAf"
 reqbtc = requests.get(urlbtc)
 soup = BeautifulSoup(reqbtc.text, "html.parser")
-mdlbtcget = soup.find('div', class_='YMlKec fxKbKc').text
-mdlbtc = float(mdlbtcget)
-
+mdlbtcget = soup.find('div', class_='YMlKec fxKbKc')
+if mdlbtcget is not None:
+    mdlbtcget = float(mdlltcget.text)
+else:
+    print("Unable to find the element for MDL-BTC")
 
 
 # Достаем цену 1 лея в ETH
 urleth = 'https://www.google.com/finance/quote/MDL-ETH?sa=X&ved=2ahUKEwiL_faTjL7-AhUdgf0HHb54BksQ-fUHegQIDhAf'
 reqeth = requests.get(urleth)
 soup = BeautifulSoup(reqeth.text, "html.parser")
-mdlethget = soup.find('div', class_='YMlKec fxKbKc').text
-mdleth = float(mdlethget)
+mdlethget = soup.find('div', class_='YMlKec fxKbKc')
+if mdlethget is not None:
+    mdlethget = float(mdlltcget.text)
+else:
+    print("Unable to find the element for MDL-BTC")
 
