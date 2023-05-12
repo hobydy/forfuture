@@ -2,8 +2,8 @@ from binance import Client
 import requests
 from bs4 import BeautifulSoup
 
-api_key = '1RrTe8IPPSZzgebyxAAgNApqjFWrsotdGGpl0Ah5OlNRwyFqVEL7rQ5QrITE1ADD'
-secret_key = '8CsJdbMIBlTr3dHDpENf5JbsycdJbX9pILMoUm5NYKSqTZ4PI3i7Kb7ZxO9zW8Qg'
+api_key = ''
+secret_key = ''
 
 client = Client(api_key, secret_key)
 
